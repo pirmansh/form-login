@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="index.html" class="login-form">
+        <h1>Login</h1>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Login">
+
+        <div class="bottom-text">
+          Don't have account? <a href="#">Sign up</a>
+        </div>
+
+      </form>
+    </div>
+
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+
+  </body>
+</html>
